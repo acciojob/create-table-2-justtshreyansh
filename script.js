@@ -28,9 +28,9 @@ const b = prompt("Input number of cols");
         if (i === 0) {
             // Header row
             for (let j = 0; j < col; j++) {
-                let th = document.createElement('th');
-                th.textContent = `Row-${i} Column-${j}`;
-                tr.appendChild(th);
+                let td = document.createElement('td');
+                td.textContent = `Row-${i} Column-${j}`;
+                tr.appendChild(td);
             }
         } else {
             // Data rows
