@@ -1,9 +1,10 @@
 const table = document.querySelector("#myTable");
-const a = prompt("Input number of rows");
-const b = prompt("Input number of cols");
+
 
 function createTable() {
     // Clear previous table content
+	const a = prompt("Input number of rows");
+const b = prompt("Input number of cols");
     table.innerHTML = '';
 
     // Parse inputs and trim spaces
