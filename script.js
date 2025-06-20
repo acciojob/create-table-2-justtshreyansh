@@ -7,8 +7,8 @@ function createTable() {
     table.innerHTML = '';
 
     // Parse inputs and trim spaces
-    let row = parseInt(a.trim());
-    let col = parseInt(b.trim());
+    let row = parseInt(a);
+    let col = parseInt(b);
 
     // Fix isNaN check: it should check row and col separately, not inside isNaN together
     if (isNaN(row) || isNaN(col)) {
