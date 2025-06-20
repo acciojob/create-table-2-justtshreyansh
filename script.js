@@ -1,4 +1,47 @@
+const table = document.querySelector("#myTable");
+const a = prompt("Input number of rows");
+const b = prompt("Input number of cols");
+
 function createTable() {
-    //Write your code here
-  
+    // Clear previous table content
+    table.innerHTML = '';
+
+    // Parse inputs and trim spaces
+    let row = parseInt(a.trim());
+    let col = parseInt(b.trim());
+
+    // Fix isNaN check: it should check row and col separately, not inside isNaN together
+    if (isNaN(row) || isNaN(col)) {
+        
+        return;
+    }
+
+    if (row <= 0 || col <= 0) {
+        alert("Please input valid positive numbers");
+        return;
+    }
+
+    for (let i = 0; i < row; i++) {
+        let tr = document.createElement('tr');
+
+        if (i === 0) {
+            // Header row
+            for (let j = 0; j < col; j++) {
+                let th = document.createElement('th');
+                th.textContent = `Row-${i} Column-${j}`;
+                tr.appendChild(th);
+            }
+        } else {
+            // Data rows
+            for (let j = 0; j < col; j++) {
+                let td = document.createElement('td');
+                td.textContent = `Row-${i} Column-${j}`;
+                tr.appendChild(td);
+            }
+        }
+
+        table.appendChild(tr);
+    }
 }
+
+createTable();
