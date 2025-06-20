@@ -4,7 +4,7 @@ const table = document.querySelector("#myTable");
 function createTable() {
     // Clear previous table content
 	const a = prompt("Input number of rows");
-const b = prompt("Input number of cols");
+const b = prompt("Input number of columns");
     table.innerHTML = '';
 
     // Parse inputs and trim spaces
